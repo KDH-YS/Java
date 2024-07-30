@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function log(...texts){
+            const logDiv = document.getElementById('log');
+            const newLogEntry = document.createElement('div');
+            // 여러 텍스트 인자를 하나의 문자열로 합칩니다.
+            newLogEntry.textContent = texts.join(' ');
+            logDiv.appendChild(newLogEntry);
+        }
+    </script>
+</head>
+<body>
+    <div id="log"></div>
+    <script>
+        // for(let i=1; i<3; i++){
+        //     log(i);
+        // }
+        // log("종료");
+        // 복리
+        // let sum=100;
+        // for(let i=1; i<13; i++){
+        //     sum *=1.01;
+        // }
+        // log(sum);
+
+        // for(let dan = 2; dan <5; dan++){
+        //     for(let n = 1; n<10; n++ ){
+        //         log(dan,"*",n,"=",dan*n);
+        //     }
+            
+        // }
+    // for(let i = 5; i>0; i--){
+    // let strStar = "";
+    // for(let line = 0; line <i; line++){
+    //         strStar += "*";
+    // }    
+    // log(strStar);
+    // }
+
+    // let star="";
+    // for(let i = 5; i>0; i--){
+    // let Void="";
+    // for(let s = 1; s <i; s++){
+    //         Void += "\u00a0";
+    // }
+    // star +="*"
+    // log(Void+star);
+    // }
+
+    // let num = 100;
+    // let sum = 1;
+    // while(sum<13){
+    //     num *=1.01;
+    //     sum++
+    // }
+    // log(num.toFixed(2),"만원");
+
+    // for하나로 구구단
+    // for(let i=1, j=2; j<=9; i++){
+    //     log(j,"*",i,"=",j*i);
+    //     if(i>=9){
+    //         log(j,"단");            
+    //         j++;
+    //         i=0;
+    //     }
+
+    // }
+    
+    // for(let i = 2; i<=10; i+=2){
+    //     log(i);
+    // }
+    // for(let i=1; i<11; i++){
+        
+    //     if(i%2 == 1){continue;
+
+    //     }
+    //     log(i);
+    // }
+    // for(let i = 1; i<=10; i++){
+    //     if(i%3 != 0){log(i);}
+    // }
+
+    // for(let dan= 2; dan<=9; dan++){
+    //     for(let n=2; n<=9; n++){
+    //         log(dan,"*",n, "=",dan*n);
+    //     }
+    // }
+
+    // for(let i=0; i<81; i++){
+    //     let dan = parseInt(i/9) + 1;
+    //     let n = i%9+1;
+    //     log(dan,"*",n, "=",dan*n);
+
+    // }
+    
+    let total_clap = 0;
+    let stop = 1234;
+    for(let i = 1; 1<2000; i++){
+        num = i*10;
+        let count = 0;
+        while(true){
+            num = parseInt(num/10);
+            if((num%10)==3 ||(num%10)==6||(num%10)==9){count++}
+            if(num<10){
+                break;
+            }
+        }
+        total_clap += count;
+        log(i,"번째",i%4,"번 선수가 박수:",count,"누적박수",total_clap);
+        if(total_clap>=stop){
+            log(i%4,"번 선수가",stop,"번째 박수를 쳤습니다.");
+            break;
+        }
+
+    }
+
+</script>  
+</body>
+</html>

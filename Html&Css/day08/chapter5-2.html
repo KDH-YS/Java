@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Nanum+Gothic&display=swap');
+        *{ font-family: 'Nanum Gothic', sans-serif;}
+        .header > h1{ font-family: 'fascinate', cursive;}
+        li { list-style: none;}
+    </style>
+    <style>
+        .container{ width: 960px; margin: 0 auto;}
+        .content{ overflow: hidden; }
+        .section{ width: 640px; float: left; }
+        .aside{ width: 310px; float: right; }
+        ul { overflow: hidden;}
+        li { float: left;}
+
+        .header{
+            height: 100px;
+            position:  relative;
+        }
+        .header h1{
+            position: absolute;
+            left:  10px;
+            top: 30px;            
+        }
+        .gnb {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .lnb {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        .container div {
+            box-sizing: border-box;
+            border:  1px solid black;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }        
+    </style>
+    <style>
+        input {display: none;}
+        input:nth-of-type(1) ~ .a:nth-of-type(1) {
+            display: none;
+        }
+        input:nth-of-type(2) ~ .b:nth-of-type(2) {
+            display: none;
+        }
+        input:nth-of-type(1):checked ~ .a:nth-of-type(1) {
+            display: block;
+        }
+        input:nth-of-type(2):checked ~ .b:nth-of-type(2) {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Lorem Ipsum Dolor Sit Amet</h1>
+            <div class="gnb">
+                <ul>
+                    <li>Lorem</li> 
+                    <li>Ipsum</li>
+                    <li>Dolor</li>
+                    <li>Sit</li>
+                    <li>Amet</li>
+                </ul>
+            </div>
+            <div class="lnb">
+                <ul>
+                    <li>Lorem</li>
+                    <li>Ipsum</li>
+                    <li>Dolor</li>
+                    <li>Sit</li>
+                    <li>Amet</li> 
+                    <li>Come</li>
+                    <li>Corndancer</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="section">
+                <article>
+                    <h1>First article</h1>
+                    <p>Culpa ipsum duis qui deserunt labore qui deserunt est ipsum in cillum aute voluptate. Qui tempor laboris minim aliquip sint voluptate amet magna cillum Lorem. Nostrud sint velit enim reprehenderit consequat ut consequat. Proident consectetur cupidatat est laboris sit consequat consectetur ipsum. Sunt nisi mollit sint aliquip officia consectetur commodo. Occaecat nostrud velit consequat incididunt qui magna fugiat nisi culpa amet.</p>
+                    <p>Ipsum in consequat laborum veniam sunt nulla cillum aliqua voluptate. Excepteur aliquip cupidatat nisi irure ut in in duis aliquip cillum do laborum pariatur deserunt. Velit dolore sint labore nulla ipsum ullamco pariatur et et. Voluptate elit qui ut quis.</p>
+                    <p>Ullamco ut ad nostrud dolor labore dolor esse culpa dolor nulla tempor quis. Ullamco non laborum ipsum exercitation fugiat sit enim velit. Velit proident Lorem ex do aliqua aliquip aliqua Lorem ipsum nostrud ullamco dolore. Velit eu laboris eiusmod commodo id in culpa cillum pariatur est.</p>
+                    <p>Culpa ipsum duis qui deserunt labore qui deserunt est ipsum in cillum aute voluptate. Qui tempor laboris minim aliquip sint voluptate amet magna cillum Lorem. Nostrud sint velit enim reprehenderit consequat ut consequat. Proident consectetur cupidatat est laboris sit consequat consectetur ipsum. Sunt nisi mollit sint aliquip officia consectetur commodo. Occaecat nostrud velit consequat incididunt qui magna fugiat nisi culpa amet.</p>
+                    <p>Ipsum in consequat laborum veniam sunt nulla cillum aliqua voluptate. Excepteur aliquip cupidatat nisi irure ut in in duis aliquip cillum do laborum pariatur deserunt. Velit dolore sint labore nulla ipsum ullamco pariatur et et. Voluptate elit qui ut quis.</p>
+                    <p>Ullamco ut ad nostrud dolor labore dolor esse culpa dolor nulla tempor quis. Ullamco non laborum ipsum exercitation fugiat sit enim velit. Velit proident Lorem ex do aliqua aliquip aliqua Lorem ipsum nostrud ullamco dolore. Velit eu laboris eiusmod commodo id in culpa cillum pariatur est.</p>
+                    <p>Culpa ipsum duis qui deserunt labore qui deserunt est ipsum in cillum aute voluptate. Qui tempor laboris minim aliquip sint voluptate amet magna cillum Lorem. Nostrud sint velit enim reprehenderit consequat ut consequat. Proident consectetur cupidatat est laboris sit consequat consectetur ipsum. Sunt nisi mollit sint aliquip officia consectetur commodo. Occaecat nostrud velit consequat incididunt qui magna fugiat nisi culpa amet.</p>
+                    <p>Ipsum in consequat laborum veniam sunt nulla cillum aliqua voluptate. Excepteur aliquip cupidatat nisi irure ut in in duis aliquip cillum do laborum pariatur deserunt. Velit dolore sint labore nulla ipsum ullamco pariatur et et. Voluptate elit qui ut quis.</p>
+                    <p>Ullamco ut ad nostrud dolor labore dolor esse culpa dolor nulla tempor quis. Ullamco non laborum ipsum exercitation fugiat sit enim velit. Velit proident Lorem ex do aliqua aliquip aliqua Lorem ipsum nostrud ullamco dolore. Velit eu laboris eiusmod commodo id in culpa cillum pariatur est.</p>
+                </article>
+            </div>
+            <div class="aside">
+                <article>
+                    <label for="1">1st</label>
+                    <label for="2">2nd</label>
+                    <input type="radio" name="as" id="1"checked>
+                    <input type="radio" name="as" id="2">
+                    <p class="a">Enim culpa cupidatat culpa qui amet ad aute est ipsum sunt voluptate non. Consequat magna reprehenderit qui esse veniam esse dolor incididunt nostrud cillum. Do amet nostrud cillum qui veniam voluptate nulla voluptate mollit occaecat.</p>
+                    <p class="a">Dolor cillum aliquip dolore id sint. Laborum pariatur esse est in. Voluptate velit deserunt sint quis cillum. Lorem Lorem aliqua laboris eu tempor veniam adipisicing dolor sint laboris velit ipsum adipisicing. Enim mollit do velit officia voluptate nisi enim pariatur elit esse voluptate proident anim. Tempor quis anim do non ex veniam.</p>
+                    <p class="b">Anim fugiat sint eu culpa in proident eiusmod nisi duis laboris officia. Excepteur excepteur aliqua non nulla minim non minim sint exercitation. Consectetur deserunt veniam sint cillum. Fugiat reprehenderit nulla eiusmod voluptate ullamco et aliqua proident elit est labore elit qui.</p>
+                </article>
+                
+            </div>
+        </div>
+        <div class="footer">
+            <p>Enim culpa cupidatat culpa qui amet ad aute est ipsum sunt voluptate non. Consequat magna reprehenderit qui esse veniam esse dolor incididunt nostrud cillum. Do amet nostrud cillum qui veniam voluptate nulla voluptate mollit occaecat.</p>
+            <p>Dolor cillum aliquip dolore id sint. Laborum pariatur esse est in. Voluptate velit deserunt sint quis cillum. Lorem Lorem aliqua laboris eu tempor veniam adipisicing dolor sint laboris velit ipsum adipisicing. Enim mollit do velit officia voluptate nisi enim pariatur elit esse voluptate proident anim. Tempor quis anim do non ex veniam.</p>
+            <p>Anim fugiat sint eu culpa in proident eiusmod nisi duis laboris officia. Excepteur excepteur aliqua non nulla minim non minim sint exercitation. Consectetur deserunt veniam sint cillum. Fugiat reprehenderit nulla eiusmod voluptate ullamco et aliqua proident elit est labore elit qui.</p>
+</div>
+    </div>
+    
+</body>
+</html>

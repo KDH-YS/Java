@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+    <style>
+        .btn{
+            position: fixed;
+            top: 10px;
+            background-color: red;
+            color: white;
+        }
+        #btnScrollTop{
+            left:50px;
+        }
+        #btnScrollLeft{
+            left:150px;
+        }
+        #btnAniLeftp{
+            left:250px;
+        }
+        #btnAniLeft{
+            left:350px;
+        }
+        #top{
+            position: fixed;
+            right: 50px;
+            bottom: 100px;
+            background-color: #333;
+            padding: 3px;
+            color: white;
+            border-radius: 20%;
+        }
+        a{text-decoration: none; color: white;}
+        #wrap{
+            width: 700px;
+            background-color: darkgray;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div id="btnScrollTop" class="btn">scrollTop</div>
+    <div id="btnScrollLeft" class="btn">scrollLeft</div>
+    <div id="btnAniLeftp" class="btn">AniTop</div>
+    <div id="btnAniLeft" class="btn">AniLeft</div>
+    <div id="wrap">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus doloremque dicta excepturi rem veniam omnis fugiat. Rem, aliquam, vel, porro illum cum voluptate reprehenderit totam in iusto aperiam sapiente!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem error odio eum animi, culpa earum, perferendis vero necessitatibus libero odit laboriosam sed accusantium tempore. Molestias quo ut voluptate tempore deleniti!        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus doloremque dicta excepturi rem veniam omnis fugiat. Rem, aliquam, vel, porro illum cum voluptate reprehenderit totam in iusto aperiam sapiente!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem error odio eum animi, culpa earum, perferendis vero necessitatibus libero odit laboriosam sed accusantium tempore. Molestias quo ut voluptate tempore deleniti!        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus doloremque dicta excepturi rem veniam omnis fugiat. Rem, aliquam, vel, porro illum cum voluptate reprehenderit totam in iusto aperiam sapiente!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem error odio eum animi, culpa earum, perferendis vero necessitatibus libero odit laboriosam sed accusantium tempore. Molestias quo ut voluptate tempore deleniti!        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus doloremque dicta excepturi rem veniam omnis fugiat. Rem, aliquam, vel, porro illum cum voluptate reprehenderit totam in iusto aperiam sapiente!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem error odio eum animi, culpa earum, perferendis vero necessitatibus libero odit laboriosam sed accusantium tempore. Molestias quo ut voluptate tempore deleniti!        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus doloremque dicta excepturi rem veniam omnis fugiat. Rem, aliquam, vel, porro illum cum voluptate reprehenderit totam in iusto aperiam sapiente!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem error odio eum animi, culpa earum, perferendis vero necessitatibus libero odit laboriosam sed accusantium tempore. Molestias quo ut voluptate tempore deleniti!        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus doloremque dicta excepturi rem veniam omnis fugiat. Rem, aliquam, vel, porro illum cum voluptate reprehenderit totam in iusto aperiam sapiente!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem error odio eum animi, culpa earum, perferendis vero necessitatibus libero odit laboriosam sed accusantium tempore. Molestias quo ut voluptate tempore deleniti!        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus doloremque dicta excepturi rem veniam omnis fugiat. Rem, aliquam, vel, porro illum cum voluptate reprehenderit totam in iusto aperiam sapiente!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem error odio eum animi, culpa earum, perferendis vero necessitatibus libero odit laboriosam sed accusantium tempore. Molestias quo ut voluptate tempore deleniti!        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus doloremque dicta excepturi rem veniam omnis fugiat. Rem, aliquam, vel, porro illum cum voluptate reprehenderit totam in iusto aperiam sapiente!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem error odio eum animi, culpa earum, perferendis vero necessitatibus libero odit laboriosam sed accusantium tempore. Molestias quo ut voluptate tempore deleniti!
+    </div>
+    <div id="top"><a href="#">top</a></div>
+    <script>
+        $(function(){
+            $('#btnScrollTop').click(function(){
+                $('html,body').scrollTop(1500);
+            });
+            $('#btnScrollLeft').click(function(){
+                $('html,body').scrollLeft(500);
+            });
+            $('#btnAniLeftp').click(function(){
+            $('html,body').animate({scollTop:800,scrollLeft:800},800,'swing');
+            });
+            $('#btnAniLeft').click(function(){
+            $('html,body').animate({scrollTop:0,scrollLeft:0},800,'swing');
+        });
+        });
+    </script>
+
+</body>
+</html>

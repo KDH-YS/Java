@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+    <button id="btn01">텍스트스타일변경</button>
+    <button id="btn02">텍스트스타일복사</button>
+    <p class="text">텍스트 텍스트</p>
+    <p class="b" style="font-size:32px;">딱쓰뜨 딱스뜨</p>
+    <script>
+        $(
+            function(){
+                $('#btn01').click(
+                    function(){
+                        $('p.text').css(
+                            {
+                                backgroundColor:'red',
+                               // 'font-size':'2em',
+                                 fontSize:'2em',
+                                 border:'1px solid green',
+                                 fontWeight:'bolder'
+                            }
+                        );
+                    }
+                );
+                $('#btn02').click(
+                    function(){
+                        let st = $('p.text').css('background-color');
+                        $('p.b').css('background-color', st);
+                    }
+
+                );
+            }
+        );
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function log(...texts){
+            const logDiv = document.getElementById('log');
+            const newLogEntry = document.createElement('div');
+            // 여러 텍스트 인자를 하나의 문자열로 합칩니다.
+            newLogEntry.textContent = texts.join(' ');
+            logDiv.appendChild(newLogEntry);
+        }
+    </script>
+
+</head>
+<body>
+    <div id="log"></div>
+    <script>
+        let slap = 0;
+        let count = 0;
+        while(slap<=1233){
+            count++;
+            count = String(count);
+            let order = (count.split('3').length -1)+(count.split('6').length -1)+(count.split('9').length -1);
+            slap +=order;
+            count = Number(count);            
+            continue;
+        }
+            if(count%4==1){
+                log("철수");
+            }
+            else if(count%4==2){
+                log("영희");
+
+            }
+            else if(count%4==3){
+                log("말숙");
+            }
+            else{
+                log("숙희");
+            }
+        log(count);
+        log(slap);
+        
+
+    </script>
+    
+</body>
+</html>

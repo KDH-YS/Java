@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="..//jquery.js"></script>
+    <style>
+        div{
+            position: relative;
+            width: 510px;
+            height: 460px;
+            background-color: #666;
+        }
+        p{
+            position: absolute;
+            left:  100px;
+            top: 100px;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+        .ex02{
+            position: relative;
+            background-color: white;
+        }
+        section{
+            position: relative;
+            border: 1px solid black;
+            height: 100px;
+        }
+        #box01{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- ex01 -->
+    <div>
+        <p></p>
+    </div>
+    
+    <!-- ex02 -->
+------------------------------------
+     <div class="ex02">
+        <button class="ex02" id="sec" type="text">main으로 이동</button>
+        <button class="ex02" id="top" type="text">top으로 이동</button>
+        <section class="ex02" id="box01">box01</section>
+        <section class="ex02" id="box02">box02</section>
+        <section class="ex02" id="box03">box03</section>
+        <section class="ex02" id="box04">box04</section>
+     </div>
+    <script>
+        $(function(){
+            // ex01--------------
+            $('p').click(function(){
+                $('p').animate({left:Math.round(Math.random()*500),
+                    top:Math.round(Math.random()*450)},'slow')
+            })
+        });
+    </script>
+</body>
+</html>

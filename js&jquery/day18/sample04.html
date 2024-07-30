@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+</head>
+
+<body>
+    <button id="btn01">버른1</button>
+    <button id="btn02">버른2</button>
+    <button id="btn03">버른3</button>
+</body>
+<script>
+    $(function () {
+        $('#btn01').click(function () {
+            alert('버튼이눌렸어요');
+        });
+        $('#btn02').on('mouseover mouseout mouseup mousedown',function(e){
+                if(e.type === 'mouseover'){
+                    $(this).css('background-color','green');
+                } else if(e.type === 'mousedown'){
+                    $(this).css('background-color','yellow');
+                } else if(e.type === 'mouseup'){
+                    $(this).css('background-color','red');
+                } else{
+                    $(this).css('background-color','gray');
+                }
+        });
+        $('#btn03').one('click', function () {
+            alert('버튼이눌렸어요');
+        });
+    })
+</script>
+
+</html>

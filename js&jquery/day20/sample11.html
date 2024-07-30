@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        div#content{width: 960px; margin: 100px auto;}
+        ul{
+            width: 300px;
+            float: left;
+            border: 1px solid black;
+            background-color: black;
+            padding: 10px;
+        }
+        div#main{
+            float: right;
+            width: 520px;
+            height: 390px;
+            position: relative;
+            border: 1px solid red;
+        }
+        ul>li{width: 140px; float: left; margin: 5px;}
+        ul>li a>img{
+            width: 100%;
+            vertical-align: top;
+        }
+        ul,li{list-style: none;}
+        div#main>img{
+            left: 0;
+            right: 0;
+            width: 100%;
+            position: absolute;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="content">
+        <ul>
+            <li><a data="./img1/img_01.jpg"><img src="./img1/img_01.jpg"></a></li>
+            <li><a data="./img1/img_02.jpg"><img src="./img1/img_02.jpg"></a></li>
+            <li><a data="./img1/img_03.jpg"><img src="./img1/img_03.jpg"></a></li>
+            <li><a data="./img1/img_04.jpg"><img src="./img1/img_04.jpg"></a></li>
+            <li><a data="./img1/img_05.jpg"><img src="./img1/img_05.jpg"></a></li>
+            <li><a data="./img1/img_06.jpg"><img src="./img1/img_06.jpg"></a></li>
+        </ul>
+        <div id="main"><img src="./img1/img_01.jpg"></div>
+    </div>
+
+    <script>
+        $(function(){
+            $('ul>li>a').click(function(){
+                let url = $(this).attr('data');
+                // alert(url);
+                // $('#main>img').attr('src',url);
+                $('#main>img:last').fadeOut(300,function(){
+                $('#main>img:last').remove();
+                $('#main').prepend('<img src="'+url+'">');
+                }); 
+
+
+            });
+        });
+    </script>
+</body>
+</html>

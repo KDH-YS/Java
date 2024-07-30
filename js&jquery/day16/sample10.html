@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function wininfo(){
+            let sWidth = screen.width;
+            let sHeight = screen.height;
+            document.write(sWidth,"x",sHeight);
+        }
+        wininfo()
+        // window.addEventListener("resize",wininfo());
+        document.write(location.href,"<br>");
+        // location.href="https://www.naver.com";
+
+        let NavInfo = navigator.userAgent;
+        document.write(NavInfo);
+    </script>
+</body>
+</html>

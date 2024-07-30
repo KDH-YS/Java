@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            width:150px;
+            margin: 0px 15px;
+            font: bold 25px/50px Arial;
+            background-color: red;
+            color:white;
+            text-align: center;
+            border: none;
+        }
+        #box{
+            position: absolute;
+            left: 50%;
+            top:200px;
+            width: 50px;
+            height: 50px;
+            z-index: 1;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="stop()" id="stop">Stop</button>
+
+    <button onclick="moveright()" id="right">right</button>
+    <button onclick="moveleft()" id="left">left</button>
+
+    <div id="box"></div>
+    <script>
+        const btnright = document.querySelector('#right');
+        const btnStop = document.querySelector('#stop');
+        const btnleft = document.querySelector('#left');
+        let   boxEle  = document.querySelector("#box");
+        
+        let boxR = 0;
+        function boxright(){
+            boxR += 1;
+            boxEle.style.left = boxR+"px";
+
+        }
+        let right
+        function moveright(){
+            right = setInterval(boxright, 20);
+        }
+        let boxL = 0;
+        function boxleft(){
+            boxL -= 1;
+            boxEle.style.left = boxL+"px";
+        }
+        let left        
+        function moveleft(){
+            left = setInterval(boxleft, 20);
+        }
+        function stop(){
+            clearInterval(left);
+            clearInterval(right);
+        }
+    </script>
+</body>
+</html>

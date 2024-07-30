@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'd2coding';
+            white-space: pre;
+            /* 연속된 공백과 줄바꿈을 그대로 표시 */
+        }
+    </style>
+    <script>
+        function log(...texts) {
+            const logDiv = document.getElementById('log');
+            const newLogEntry = document.createElement('div');
+            // 여러 텍스트 인자를 하나의 문자열로 합칩니다.
+            newLogEntry.textContent = texts.join(' ');
+            logDiv.appendChild(newLogEntry);
+        }
+    </script>
+
+</head>
+
+<body>
+    <script>
+        document.write("<br>");
+        // function addNum(num1, num2){
+        //     let sum = num1 + num2;
+        //     return sum;
+        // }
+        // let sum1 = addNum(1,2);
+        // document.writeln(sum1,"<br>");
+        // document.writeln(addNum(3,4));
+
+        // function writeSum(num1, num2){
+        //     document.write(num1+num2);
+        // }
+        // writeSum(3,4);
+
+        // for(let dan = 2; dan < 10; dan++){
+        //     for(let n=2; n<10; n++){
+        //         document.write(dan,"*",n,"=",dan*n,"<br>")
+        //     }
+        // }
+
+        // function displayDan(dan){
+        //     for(let n=1; n<10;n++){
+        //         document.write(dan,"*",n,"=",dan*n,"<br>");
+        //     }
+        // }
+
+        // for(let dan=2; dan<10; dan++){
+        //     displayDan(dan);
+        // }
+
+
+        //     function writeBlank(count){
+        //         for(let i= 0; i<count; i++){
+        //             document.write("&nbsp");
+        //         }
+        //     }
+        //     function writeStar(count){
+        //         for(let i=0; i<count; i++){
+        //             document.write("*");
+        //         }
+        //     }
+        //     function writeorder(first,second,third,fourth){
+        //         writeBlank(first);writeStar(second);writeBlank(third);writeStar(fourth);document.write("<br>");
+        //                }
+        //     function writeOrder(first,second,third,fourth){
+        //         writeStar(first);writeBlank(second);writeStar(third);writeBlank(fourth);document.write("<br>");
+        //     }
+
+        //     document.write("<br>");
+        //    writeorder(0,4,3,1);
+        //    writeorder(1,3,2,2);
+        //    writeorder(2,2,1,3);
+        //    writeorder(0,4,0,4);
+        //    writeOrder(3,1,2,2);
+        //    writeOrder(2,2,3,1);
+        //    writeOrder(1,3,4,0);
+        // function line(str,n) {
+        //     for (i = 1; i <= n; i++) {
+        //         document.write(str);
+        //     }
+        //     document.write("<br>");
+        // }
+        // line("*",5);
+        // line("@",1);
+        // line("#",10);
+
+        // function add(num1,num2){
+        //     let sum = num1+num2;
+        //     document.write(sum,'<br>');
+        // }
+        // add(2,3);
+        // add(45,3463);
+        // add(123456,876543);
+
+        // function gift(sport) {
+        //     switch (sport) {
+        //         case "축구":
+        //             alert("박지성 사인볼에 당첨되셨습니다.");
+        //             break;
+        //         case "야구":
+        //             alert("류현진 사인볼에 당첨되셨습니다.");
+        //             break;
+        //         case "농구":
+        //             alert("마이클조던 사인 티셔츠에 당첨되셨습니다.");
+        //             break;
+        //         default:
+        //             alert("꽝");
+        //             break;
+        //     }
+        // }
+
+        // function flower(flowerName){
+        //     switch(flowerName){
+        //         case '무궁화':alert('무궁화동호회를 추천합니다.');break;
+        //         case '장미':alert('장미동호회를 추천합니다.');break;
+        //         case '국화':alert('국화동호회를 추천합니다.');break;
+        //     }
+        // }
+        
+        // let first = 13;
+        // let last = 7;
+        // let result = all(first,last);
+        //     document.write(result);
+
+        //     function all(a,b){
+        //         var sam = a+b;
+        //         return sam;
+        //     }
+        // var num = 1;
+        // function love(num){
+        //     var a = num+1;
+        //     document.write(a);
+        // }
+        // love(3);
+        // document.write("<br>",num,",");
+
+        // var str = '강';
+        // //함수선언
+        // function love(){
+        //     str = '산';
+        //     var sum ='강';
+        //     document.write('함수내에서 출력',str,'<br>');
+        //     document.write('함수내에서 출력',sum,'<br>');
+        // }
+        // document.write(str,'<br>');
+
+        // love();
+        // document.write(str,'<br>');
+
+        // function all(a,b){
+        //     var result;
+        //     result = a>b? console.log('a>b'): console.log('a<b');
+        //     return result;
+        // }
+        // let first = 13;
+        // let last = 7;
+
+        // var all = function(a,b){
+        //     let result ;
+        //     a>b? document.write('a>b'): document.write('a<b');
+        //     result = a>b? 'a>b' : 'a<b'
+        //     return result;
+        // }(4,5);
+
+        // console.log(all);
+
+        // function maxFunc(a,b){
+        //     let result = a>b? a: b;
+        //     return result;
+        // }
+        // let max = (a,b) => a>b? a: b;
+
+        // document.write(max(15,6),'<br>');
+        // document.write(maxFunc(6,5));
+
+        function val(){
+            let a=Number(prompt('값을 입력하세요'));
+            let b=Number(prompt('값을 입력하세요'));
+
+            let sum = a+b;
+            let prod= a*b;
+            document.write(sum,'<br>');
+            document.write(prod);
+        }
+        val();
+        document.write('<br>')
+
+        function num(jumsu){
+            if(jumsu<=100 && jumsu>=90){
+                document.write("A학점");
+            }
+            else if(jumsu<90 && jumsu>=80){
+                document.write("B학점");
+            }
+            else if(jumsu<80 && jumsu>=70){
+                document.write("C학점");
+            }
+            else if(jumsu<70 && jumsu>=60){
+                document.write("D학점");
+            }
+            else {
+                document.write("F학점");
+            }
+        }
+        let score = prompt('점수');
+
+        num(score);
+
+    </script>
+
+
+</body>
+
+</html>

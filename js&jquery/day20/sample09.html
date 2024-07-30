@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+    <div>
+        <h1>AJAX예제</h1>
+        <p id="main"></p>
+    </div>
+    
+    <script>
+        $(function(){
+            getData();
+        });
+        function getData(){
+            $.get("testxmldata.xml",successFn)
+            .fail(errorFn)
+            .always(completeFn);
+        }
+        function successFn(result){
+            let names = result.getElementsByTagName('name');
+            let titles = result.getElementsByTagName('title');
+            for(let i = 0; i<titles.length;i++){
+            $('#main').append('제목:'+titles[i].textContent+'이름:'+names[i].textContent+'<br>')
+        }}
+        function errorFn(xhr, status, strErr){
+            $('#main').append("error:"+strErr+"<br>")
+        }
+        function completeFn(){
+            $('#main').append("종료되었습니다");
+        }
+    </script>
+
+</body>
+</html>

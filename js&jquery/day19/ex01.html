@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+
+    <style>
+        #box{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        dl {
+            position: relative;
+            width: 100%;
+        }
+
+        dt {
+            position: relative;
+
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+            padding: 10px;
+        }
+
+        dd {
+            position: relative;
+
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- ex01 -->
+<button id="btn">Start Animation</button>
+<div id="box"></div>
+
+    <!-- ex02 -->
+    <dl>
+        <dt>타이틀01</dt>
+        <dd>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur excepturi doloremque optio similique
+            rerum voluptate harum, eveniet obcaecati quam debitis, perferendis repellat adipisci. Velit eius dolorum
+            itaque totam et distinctio.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur excepturi doloremque optio similique
+            rerum voluptate harum, eveniet obcaecati quam debitis, perferendis repellat adipisci. Velit eius dolorum
+            icati quam debitis, perferendis repellat adipisci. Velit eius dolorum
+            itaque totam et distinctio.</dd>
+        <dt>타이틀2</dt>
+        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit cumque commodi reprehenderit sequi natus
+            eligendi quasi magni qui praesentium exercitationem voluptas, cupiditate minima eaque! Eveniet facere
+            inventore autem blanditiis placeat.</dd>
+        <dt>타이틀3</dt>
+        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum repellat officia in illum, laborum corporis
+            veniam exercitationem molestias ducimus nesciunt nobis, tenetur beatae, facilis delectus nisi odit nulla at
+            possimus.</dd>
+    </dl>
+
+    
+    <script>
+        $(function(){
+            // ex01-------------
+            $('#btn').click(function(){
+                $('#box').animate({width:'+=400px'},300)
+                .animate({height:'+=300px'},400)
+                .animate({left:'+=200px'},300)
+                .animate({borderWidth:'+=10','margin-top':'+=200px'},'slow')
+
+            });
+            // ex02-------------
+            $('dt').click(function(){
+                if($(this).next().css('display') !='none'){
+                    $($(this).next()).siblings('dd').slideUp(1000);
+                    $(this).next().slideToggle(1000);                
+                    
+                }
+                else {
+                $($(this).next()).siblings('dd').slideUp(1000);
+                $(this).next().slideToggle(1000);}                    
+
+            });
+        });
+    </script>
+</body>
+
+</html>

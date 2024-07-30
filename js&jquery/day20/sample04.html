@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+    <style>
+        span {
+            display: none; /* Initially hide all <span> elements */
+            color: red; /* Make the error message red */
+        }
+    </style>
+</head>
+<body>
+    <p>이름(한글): <input type="text" name="koreanName" id="koreanName"><span>한글만 입력하세요</span></p>
+    <p>이름(영문): <input type="text" name="englishName" id="englishName"><span>영문으로 입력하세요</span></p>
+    
+    <script>
+        $(function(){
+            $('#koreanName').on('input', function(){
+                var inputVal = $(this).val();
+                if (!/^[가-힣]*$/.test(inputVal)) { // Regular expression to match only Korean characters
+                    $(this).next('span').css('display', 'inline'); // Show error message
+                } else {
+                    $(this).next('span').css('display', 'none'); // Hide error message
+                }
+            });
+
+            $('#englishName').on('focus', function(){
+                $(this).next('span')
+                        .css('display','inline')
+                        .delay(800).fadeOut(1000);
+            });
+        });
+    </script>
+</body>
+</html>

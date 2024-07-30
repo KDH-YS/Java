@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+    <link rel="stylesheet" href="./ex5/css/reset.css">
+    <link rel="stylesheet" href="./ex5/css/modal.css">
+    <style>
+    #back{position:fixed; width:100%; height:100%;
+        left:0; top:0;
+        background-color:rgba(0,0,0,0.5);
+        display:none;
+    }
+    #main{
+        position:fixed;
+        left:50%; top:50%;
+        display:none; 
+        background-color: rgb(255,0,0,0.5);
+    }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="./ex5/img/img_01.jpg" class="modal"><img src="./ex5/img/img_01.jpg" alt=""></a></li>
+        <li><a href="./ex5/img/img_02.jpg" class="modal"><img src="./ex5/img/img_02.jpg" alt=""></a></li>
+        <li><a href="./ex5/img/img_03.jpg" class="modal"><img src="./ex5/img/img_03.jpg" alt=""></a></li>
+        <li><a href="./ex5/img/img_04.jpg" class="modal"><img src="./ex5/img/img_04.jpg" alt=""></a></li>
+        <li><a href="./ex5/img/img_05.jpg" class="modal"><img src="./ex5/img/img_05.jpg" alt=""></a></li>
+        <li><a href="./ex5/img/img_06.jpg" class="modal"><img src="./ex5/img/img_06.jpg" alt=""></a></li>
+        <li><a href="./ex5/img/img_07.jpg" class="modal"><img src="./ex5/img/img_07.jpg" alt=""></a></li>
+        <li><a href="./ex5/img/img_08.jpg" class="modal"><img src="./ex5/img/img_08.jpg" alt=""></a></li>
+    </ul>
+    
+    <script>
+        $(function(){
+            $('body').append('<div id="back"></div>');
+            $('body').append('<div id="main"></div>');
+
+            $('ul>li>a.modal').on('click',function(){
+                let imgaddr = $(this).attr('href');
+                $('#back').show();
+                $('#main').show();
+                $('#main').html('<img src='+imgaddr+'>');
+                let imgWidth = $('#main').width()/2;
+                let imgHeight = $('#main').height()/2;
+                $('#main').css({marginLeft:'-'+imgWidth+'px'});
+                $('#back').click(function(){
+                    $('#back').hide();
+                    $('#main').hide();
+                });
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>

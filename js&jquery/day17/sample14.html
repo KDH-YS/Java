@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+    <style>
+        section {
+            width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        section>p#first {
+            width: 350px;
+            padding: 20px;
+            border: 3px solid gray;
+            background-color: yellow;
+        }
+
+        p.last {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <button id="btn01">추가</button>
+        <p id="first">본문내용1</p>
+    </section>
+    <script>
+        let cnt = 1;
+
+        $(function () {
+            $("#btn01").click(function () {
+
+                //apend
+                $('p').append('<b>append요소' + cnt + '</b>').prepend('<i>preppend요소' + cnt + '</i>')
+                    .before('<i>before요소' + cnt + '</i>').after('<i>after요소' + cnt + '</i>');
+                // //prepend
+                // $('p').prepend('<i>preppend요소</i>');
+                // //before
+                // $('p').before('<i>before요소</i>');
+                // //after
+                // $('p').after('<i>after요소','</i>');
+                cnt += 1;
+            });
+        });
+    </script>
+</body>
+
+</html>

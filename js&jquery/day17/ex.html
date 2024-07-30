@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <!--ex01-->
+    <button id="btn01">button</button>
+    <div id="container">
+        <nav>
+            <ul class="list">
+                <li id="first">One</li>
+                <li>Two</li>
+                <li>Three</li>
+            </ul>
+        </nav>
+    </div>
+    <script>
+        $('#btn01').click(function () {
+            $('div#container>nav>ul.list>li:nth-child(2)').css({
+                'background-color': '#9ab92e',
+                'color': '#05184D'
+            });
+        });
+    </script>
+
+    <!--ex02-->
+    <button id="btn02">button</button>
+    <ul id="ex02" class="nav1">
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        $('#btn02').click(function () {
+            $('.nav1#ex02>li:not(:eq(1))').css('background-color', '#9ab92E').css('border',
+                '1px dotted #05184D')
+        });
+    </script>
+    <!--ex03-->
+    <button id="btn03">button</button>
+    <ul class="nav2" id="ex03">
+        <li>apple</li>
+        <li>banana</li>
+        <li></li>
+    </ul>
+    <script>
+        $('#btn03').click(function () {
+            $('ul.nav2#ex03>li:empty').text('orange');
+        });
+    </script>
+    <!--ex04-->
+    <button id="btn04">button</button>
+    <div id="container">
+        <ul class="nav1">
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <ul class="nav2">
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+    <script>
+        $('#btn04').click(
+            function () {
+                $('div#container>ul>li:lt(2)').css({
+                    'background-color': '#9ab92e',
+                    'border': '1px dotted #05184d'
+                });
+            }
+        );
+    </script>
+    <!--ex05-->
+    <button id="btn05">button</button>
+    <ul class="box05">
+        <li id="first" title="a1a">this is paragraph</li>
+        <li class="second" title="bb">this is paragraph</li>
+        <li id="third" title="cerc">this is paragraph</li>
+        <li class="fourth" title="ded">this is paragraph</li>
+    </ul>
+    <script>
+        $('#btn05').click(function () {
+            $('ul.box05>li[id^=f][id*=s]').css('background-color', '#00c8c3').css('border',
+                '1px dotted #05184d')
+        })
+    </script>
+    <!--ex06-->
+    <button id="btn06">button</button>
+    <ul class="box06">
+        <li id="first" title="a1a">this is paragraph</li>
+        <li class="second" title="bb">this is paragraph</li>
+        <li id="third" title="cerc">this is paragraph</li>
+        <li class="fourth" title="ded">this is paragraph</li>
+    </ul>
+    <script>
+        $('#btn06').click(function () {
+            $('ul.box06>li[title!=bb]').css('background-color', '#00c8c3').css('border', '1px dotted #05184d')
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+
+    <script>
+        function includeHTML(ctrl, page, callback) {
+            $.get(page, function(data) {
+                $(ctrl).html(data);
+                if (callback) {
+                    callback();
+                }
+            });
+        }
+    </script>
+
+</head>
+<body>
+    <div id="wrap">
+        <!-- 상단영역 시작 includeHTML용으로 개조 -->
+        <header>
+            <!-- 헤드영역 시작 -->
+            <nav>
+                <!-- 탑영역 시작 -->
+                <div class="top">
+                    <ul class="top-menu">
+                        <li><a href="#"> 연구센터 </a></li>
+                        <li><a href="#"> 소식마당 </a></li>
+                        <li><a href="#"> 로그인 </a></li>
+                    </ul>
+                </div>
+                <!-- 탑영역 끝 -->
+    
+                <!-- 로고메뉴영역 시작 -->
+                <div class="head">
+                    <!-- 로고영역 시작 -->
+                    <div class="logo">
+                        <a href="#">
+                            <img src="./img/logo_white.png" alt="">
+                        </a>
+                    </div>
+                    <!-- 로고영역 끝 -->
+        
+                    <!-- 메뉴영역 시작 -->
+                    <div class="head-menu">
+                        <ul class="head-main-menu">
+                            <li>
+                                <a href="#"> 메인페이지 </a>
+                            </li>
+                            <li>
+                                <a href="#"> 회사소개 </a>
+                                <ul class="head-sub-menu">
+                                    <li><a href="#"> 회사소개 </a>
+                                        <ul class="head-sub-menu-sub">
+                                            <li><a href="#"> 회사소개 스타일1 </a></li>
+                                            <li><a href="#"> 회사소개 스타일2 </a></li>
+                                            <li><a href="#"> 회사소개 스타일3 </a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#"> 회사비전 </a>
+                                        <ul class="head-sub-menu-sub">
+                                            <li><a href="#"> 회사비전 스타일1 </a></li>
+                                            <li><a href="#"> 회사비전 스타일2 </a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#"> 회사연혁 </a></li>
+                                    <li><a href="#"> 조직소개 </a></li>
+                                    <li><a href="#"> 오시는 길 </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"> 제품서비스 </a>
+                                <ul class="head-sub-menu">
+                                    <li><a href="#">  </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"> 갤러리 </a>
+                                <ul class="head-sub-menu">
+                                    <li><a href="#">  </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"> 뉴스센터 </a>
+                                <ul class="head-sub-menu">
+                                    <li><a href="#">  </a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- 영역 끝 -->
+    
+                        <!-- 아이콘영역 시작 -->
+                        <ul class="icon">
+                            <li><a href="#"> 
+                                <img src="https://mwpdemo12348.mycafe24.com/wp-content/themes/ktheme_biz_fabric/images/icon_search.svg" alt=""> 
+                                <img src="https://mwpdemo12348.mycafe24.com/wp-content/themes/ktheme_biz_fabric/images/icon_search_black.svg" alt="">
+                            </a></li>
+                            <li><a href="#"> 
+                                <img src="https://mwpdemo12348.mycafe24.com/wp-content/themes/ktheme_biz_fabric/images/icon_full_menu.svg" alt="">
+                                <img src="https://mwpdemo12348.mycafe24.com/wp-content/themes/ktheme_biz_fabric/images/icon_full_menu_black.svg" alt="">
+                            </a></li>
+                        </ul>
+                        <!-- 아이콘영역 끝 -->
+
+                    </div>
+                    <!-- 메뉴영역 끝 -->
+
+                </div>
+                <!-- 로고메뉴영역 끝 -->
+                
+                <!-- 검색 시작 -->
+
+                <!-- 토글메뉴 시작 -->
+                 
+            </nav>
+            <!-- 헤드영역 끝 -->
+        </header>
+        <!-- 상단영역 끝 -->
+
+        <div class="title-page">
+
+
+        </div>
+
+    
+        <!-- 한 페이지 이동하는 스크롤(원페이지 스크롤) -->
+        <!-- https://codepen.io/jh91/pen/oNYJLXW -->
+        
+        <!-- 스크롤 시 나타나는 효과 구현하기 -->
+        <section>
+            https://mwpdemo12348.mycafe24.com/wp-content/uploads/2022/03/slider_1-scaled-1.jpg
+            https://mwpdemo12348.mycafe24.com/wp-content/uploads/2022/03/slider_2-1-scaled-1.jpg
+        
+            https://mwpdemo12348.mycafe24.com/wp-content/themes/ktheme_biz_fabric/images/bg_vision.jpg
+        </section>
+        
+        <footer>
+    
+    
+    
+        </footer>
+
+            
+    </div>
+
+</body>
+</html>

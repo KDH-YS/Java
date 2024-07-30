@@ -1,0 +1,33 @@
+ <!DOCTYPE html>
+ <head>
+  <title>Document</title>
+  <style>
+    input {
+      display: none;
+    }
+    input:nth-of-type(1) ~ div:nth-of-type(1){
+      display: none;
+    }
+    input:nth-of-type(2) ~ div:nth-of-type(2){
+      display: none;
+    }
+    
+    input:nth-of-type(1):checked ~ div:nth-of-type(1){
+      display: block;
+    }
+    input:nth-of-type(2):checked ~ div:nth-of-type(2){
+      display: block;
+    }
+  </style>
+ </head>
+
+ <body>
+  <label for="1">1번</label>
+  <label for="2">2번</label>
+  <input type="radio" name="tab" id="1">
+  <input type="radio" name="tab" id="2" checked>
+  <div class="tap-item">Quis laboris ea excepteur Lorem magna excepteur elit duis est eu consectetur adipisicing id nostrud. Elit labore eu commodo amet laborum. Sunt aliqua irure voluptate est laboris voluptate. Pariatur magna nostrud duis quis magna. Incididunt laboris nisi veniam cillum labore Lorem ea in. Exercitation ut nulla ad deserunt irure culpa enim enim officia ipsum eu excepteur id ipsum. Labore eu minim fugiat dolore irure esse do et reprehenderit proident nulla.</div>
+  <div class="tap-item">Cupidatat eu officia reprehenderit tempor pariatur nulla dolor ullamco sint sunt anim consectetur. Pariatur aute anim ut laboris ad dolor adipisicing. Quis sint quis eu in minim nisi nostrud reprehenderit culpa laboris eiusmod nulla. Nostrud laborum sunt non cillum aute aliqua incididunt ullamco cupidatat in est sunt. Ad occaecat est eiusmod sit ea laboris voluptate ipsum do minim sunt elit. Enim id nostrud reprehenderit nostrud.</div>  
+  
+ </body>
+ </html>

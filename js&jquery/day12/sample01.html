@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function log(...texts){
+            const logDiv = document.getElementById('log');
+            const newLogEntry = document.createElement('div');
+            // 여러 텍스트 인자를 하나의 문자열로 합칩니다.
+            newLogEntry.textContent = texts.join(' ');
+            logDiv.appendChild(newLogEntry);
+        }
+    </script>
+</head>
+<body>
+    <div id="log"></div>
+    <script>
+        // 산술연산자
+        // let num10 = 10;
+        // let num20 = 20;
+        // let num03 = 3;
+        // log(num10+num20);
+        // log(num10-num20);
+        // log(num10*num20);
+        // log(num10/num03);
+        // log(num10%num03);
+
+        //대입연산자
+        // let sum01 = 10;
+        // log(sum01);
+        // sum01 += 5;
+        // log(sum01);
+        // sum01 -=5;
+        // log(sum01);
+        // sum01*=5;
+        // log(sum01);
+        // sum01/=5;
+        // log(sum01);
+        // sum01%=5;
+        // log(sum01);
+        // let a = 10;
+        // let b, y;
+        // let x = 10;
+
+        // b = a++;
+        // log(a, b);
+        // y = ++x;
+        // log(x,y);
+        // 결합 연산자---
+        // a = 2;
+        // log(3+4);
+        // log("고양"+"이");
+        // log("고양이"+2+"마리");
+        // log(2+"마리");
+        // log(2+3+"마리");
+        // log("고양이"+2+3+"마리");
+        // log(++a + "마리")
+        // log("고양이"+(2+3)+"마리");
+
+        // let num1=2;
+        // let num2=3;
+        // log(`고양이 ${num1+num2}마리`);
+
+        //비교연산자 ---
+        // let a = 20;
+        // let b = 10;
+        // let c = '10';
+        // console.log(a<b);
+        // console.log(b>c);
+        // console.log(b>=c);
+        // console.log(b==c);
+        // console.log(b===c);
+        // console.log(b!=c);
+        // console.log(b!==c);
+
+        // var a = 20;
+        // var b = 10;
+        // var c= "10";
+        // console.log('a가 b보다 크다:',a>b);
+        // console.log('b가 a보다 작다 :',b<a);
+        // console.log('b가 c와 같다:', b==c);
+        // console.log('b하고 c가 정말로 같다:', b===c);
+        // console.log('b하고 c가 정말로 다르다:', b!==c);
+
+        //논리연산자
+        // let id = 'main';
+        // let pwd = '1234';
+
+        // let userId = 'main';
+        // let userPwd = '1234';
+
+        // let result = (id===userId) && (pwd === userPwd);
+        // log(result);
+
+        // log(id==='main' && pwd==='5678');
+        // log(id==='main' || pwd==='5678');
+        // log(!(id==='main'||pwd==='5678'));
+
+        //저장된 id, 패스워드값 선언하기
+        // var ID = 'main';
+        // var PW = 'A0123';
+        // // 사용자 id, 패스워드값 선언하기
+        // var userId = prompt('아이디를 입력하세요'); //사용자 id값 입력하기
+        // var userPw = prompt('패스워드를 입력하세요'); //사용자 pw값 입력하기
+        
+        // //결과를 알아보기 위한 and 논리식 만들기
+        // var result = (ID === userId) && (PW === userPw);
+        // //결과 출력
+        // log(result);
+
+        // let classA = prompt('소프트웨어 설계 점수?');
+        // let classB = prompt('소프트웨어 개발 점수?');
+        // let classC = prompt('프로그램 언어활용 점수?');
+        // let classD = prompt('정보시스템구축관리 점수?');
+        // //평균 60 과락40
+        // let resultA = (Number(classA)>=40);
+        // let resultB = (Number(classB)>=40);
+        // let resultC = (Number(classC)>=40);
+        // let resultD = (Number(classD)>=40);
+        
+        // let total = (Number(classA)+Number(classB)+Number(classC)+Number(classD));
+        // let avg = (total/4) >=60;
+        // let result = (resultA && resultB && resultC && resultD &&avg)
+
+        // if(result = true){log("합격")}
+        // else{log("불합격")}
+        
+        let age = prompt('나이를 입력하세요')
+        let assets = prompt('자산을 입력하세요')
+        let amount = prompt('희망하는 대출금액을 입력하세요')
+
+        let resultA = age>=20
+        let resultB = (assets>=200 && amount<=100)||(assets>=100 && amount<=50)
+
+        if (resultA&&resultB){log("대출가능")}
+        else{log("대출불가")}
+
+        let result = (resultA&&resultB)? "가능":"불가능";
+        log("대출",result)
+        
+        </script>
+
+</body>
+</html>

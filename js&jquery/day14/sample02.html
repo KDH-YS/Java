@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        font-family: 'd2coding';
+        white-space: pre;
+        /* 연속된 공백과 줄바꿈을 그대로 표시 */
+    }
+</style>
+<script>
+    function log(...texts) {
+        const logDiv = document.getElementById('log');
+        const newLogEntry = document.createElement('div');
+        // 여러 텍스트 인자를 하나의 문자열로 합칩니다.
+        newLogEntry.textContent = texts.join(' ');
+        logDiv.appendChild(newLogEntry);
+    }
+    function writeln(...str){
+        document.write(str, '<br>');
+    }
+</script>
+
+</head>
+<body>
+    <script>
+        document.write('<br>');
+    //     var Today = new Date();
+    //     document.write(Today,'<br>');
+    //     document.write('요일:',Today.getDay(),'<br>');
+       
+    //     document.write("시간",Today.getHours(),'<br>');
+    //     document.write("년",Today.getFullYear(),'<br>');
+    //     document.write("월",Today.getMonth(),'<br>');
+    //     document.write("일",Today.getDate(),'<br>');
+    //     document.write("초",Today.getTime(),'<br>');
+
+    //     let day1 = new Date('2024,6,27 14:00:00');
+    //     let day2 = new Date('2024,6,27 15:02:03');
+    //     let todiff = day2- day1;
+    //     document.write(todiff,'<br>');
+        
+    //     document.write(
+    //     ` ${Math.floor(todiff%(1000*60*60*24)/(1000*60*60))}시 ${Math.floor(todiff%(1000*60*60)/(1000*60))}분 ${Math.floor(todiff%(1000*60)/(1000))}초
+    //     `)
+    // document.write("절대값:",Math.abs(-23),'<br>'); //절대값
+    // document.write("몇승:",Math.pow(2,3),'<br>'); //지수,승수
+    // document.write("제곱근:",Math.sqrt(9),'<br>'); //제곱근
+    // document.write("올림:",Math.ceil(2.3),'<br>'); //올림
+    // document.write("반올림:",Math.round(2.5),'<br>'); //반올림
+    // document.write("내림:",Math.floor(2.7),'<br>'); //내림
+    // document.write("큰값:",Math.max(2,3),'<br>'); //
+    // document.write("작은값:",Math.min(2,3),'<br>');//
+    // document.write("랜덤:",Math.random(),'<br>');
+
+    // let dice = Math.floor(Math.random()*8)+10;
+    // document.write('주사위',dice);
+    
+    // let pen = new Array(5);
+    // pen[0] = "red";
+    // pen[1] = "green";
+    // pen[2] = "blue";
+    // pen[3] = "orange";
+    // pen[4] = "yellow";
+
+    // pen.unshift('sky');
+
+    // writeln(pen);
+    // writeln(pen[2]);
+    // writeln('----');
+
+    // for(let i=0; i<pen.length; i++){
+    //     writeln(pen[i]);
+    // }
+
+    let stars = new Array();
+
+    stars.push("강호동");
+    stars.push("윤지현");
+    stars.unshift("김윤지");
+    // stars.shift();
+    // stars.pop();
+    stars.push('아이유');
+    stars.push('현빈');
+    stars.push('박지성');
+
+    
+    // for(let i=0; i<stars.length; i++){
+    //     writeln(i,stars[i]);
+    // }
+    // strbuffer = stars.join("&");
+    // writeln(strbuffer);
+
+    // stars.sort((b,a) => a>b? 1:(a<b? -1:0));
+    // //stars.reverse();
+    // for(let i=0; i<stars.length; i++){
+    //     writeln(i,stars[i]);
+    // }
+    // writeln('----');
+
+    // superStars = stars.slice(4,5);
+    // for(let i=0; i<superStars.length; i++){
+    //     writeln(i,superStars[i]);
+    // }
+    // writeln('----');
+
+    // stars.forEach(
+    //     function(item, index,array){
+    //         if(index%2 ==1){
+    //         writeln(index,item);
+    //     }}
+    // )
+
+    let idx= 0;
+    for(item of stars){
+        writeln(idx++,item);
+    }
+
+    </script>
+
+    
+</body>
+</html>

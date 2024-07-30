@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+</head>
+
+<body>
+    <!-- Ex01 -->
+    <button id="btn01">button</button>
+    <div id="container">
+        <p>안녕하셨어요</p>
+    </div>
+    <!-- Ex02 -->
+    <button id="btn02">button</button>
+    <div id="container2">
+        <p>안녕하셨어요</p>
+    </div>
+    <!-- Ex03 -->
+    <section>
+        <p class="btn">
+            <button id="btn01">이미지 가져오기</button>
+        </p>
+        <p class="box01">
+            <img src="./images/color_1.png" alt="sample">
+        </p>
+        <p class="test">1</p>
+    </section>
+    <!-- Ex04 -->
+    <section id="ex04">
+        <p class="btn04">
+            <button id="btn01">이미지 가져오기</button>
+        </p>
+        <p class="box04">
+            <img src="./runimg/1.png" alt="sample">
+        </p>
+        <p class="test01">1</p>
+    </section>
+
+    <script>
+        $(function () {
+            // Ex01
+            $('#btn01').click(function () {
+                $('#container').append('<p>반갑습니다.</p>')
+            });
+            // Ex02
+            $('#btn02').click(function () {
+                $('#container2').prepend('<p>오랜만입니다.</p>')
+            });
+            // Ex03
+            let i = 2;
+            $('p.btn>#btn01').click(function(){
+                $('p.box01>img').attr('src','./images/color_'+i+'.png');
+                $('p.test').html(i);         
+                i += 1;
+                if(i>6){
+                    i=1;
+                }
+                else{}
+            })
+            // Ex04
+            let j=15;
+            setInterval(function(){
+                $('p.box04>img').attr('src','./runimg/'+j+'.png');
+                $('p.test01').html(j);         
+                j -= 1;
+                if(j>15){
+                    j=1;
+                }
+                if(j<1){
+                    j=15;
+                }
+
+
+            },50);
+
+
+        });
+    </script>
+
+</body>
+
+</html>

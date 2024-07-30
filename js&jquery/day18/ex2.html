@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+    <style>
+         *{margin: 0;padding: 0;}
+        #wrap{
+            text-align: center;
+        }
+        #all{width:555px; height:119px; position:relative;margin:0 auto;}
+        ul{           
+            position: absolute;
+            left: -65px;
+            width: 700px;
+            height: 110px;
+            overflow: hidden;
+        }
+        li{
+            float: left;
+            list-style: none;
+            overflow: hidden;
+            width: 220px;
+            height: 100px;
+            border: 5px solid black;
+            
+        }
+        p{
+            float: right;
+        }
+        #prev{
+            position: absolute;
+            left: -75px;
+            top: 50px;
+            z-index: 100;
+        }
+        #next{
+            position: absolute;
+            top: 50px;
+            left: 615px;
+            z-index: 100;
+        }
+        img{
+            object-fit: fill;
+        }
+        .smallImage>img{
+            width: 220px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 큰이미지 -->
+    <div id="wrap">
+        <div id="bigimage">
+            <img src="./eximage/flw_01.jpg" alt="이미지01" width="800px" height="400px">
+        </div>
+        <!-- 작은이미지목록 -->
+        <div id="all">
+            <p id="prev"><img src="./eximage/prev.png" width="23" height="23"></p>
+            <p id="next"><img src="./eximage/next.png" width="23" height="23"></p>
+            <div id="show_view">
+                <ul>
+                    <li><a data="./eximage/flw_01.jpg" class="smallImage"><img src="./eximage/flw_01.jpg"></a></li>
+                    <li><a data="./eximage/flw_02.jpg" class="smallImage"><img src="./eximage/flw_02.jpg"></a></li>
+                    <li><a data="./eximage/flw_03.jpg" class="smallImage"><img src="./eximage/flw_03.jpg"></a></li>
+                    <li><a data="./eximage/flw_04.jpg" class="smallImage"><img src="./eximage/flw_04.jpg"></a></li>
+                    <li><a data="./eximage/flw_05.jpg" class="smallImage"><img src="./eximage/flw_05.jpg"></a></li>
+                </ul>
+            </div>
+            <!--/show_view-->
+        </div>
+        <!--/all-->
+    </div>
+    <!--/wrap-->
+
+</body>
+<script>
+    $(function () {
+        $('p#prev>img').click(function () {
+            $('ul').children().last().prependTo('ul')
+        });
+        $('p#next>img').click(function () {
+            $('ul').children().first().appendTo('ul')
+        });
+        $('div#show_view>ul>li>a').click(function () {
+            let href = $(this).attr('data');
+            $('div#bigimage>img').attr('src', href);
+        });
+    });
+</script>
+
+</html>

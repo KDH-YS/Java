@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1. var의 특징
+        //     var var1 = "var 변수";
+        //     console.log('var=>',var1);
+
+        //     var var1 = "var 변수 덮어쓰기";
+        //     console.log('var=>',var1);
+
+        //     var var1 = "var 변수 재정의"; //여기서 에러가 안남 : 문제
+        //     console.log('var=>',var1);
+
+        // 
+    </script>
+
+    <script>
+        //     //2.let 의 특징
+        //     let let1 = "let 변수";
+        //     console.log('let=>',let1);
+
+        //     let = "let 변수 덮어쓰기";
+        //     console.log('let=>',let1);
+
+        //     // let let1 = "var 변수 재정의"; //여기서 에러가 남
+        // console.log('=>',let1);
+    </script>
+
+    <script>
+        //3.const 의 특징
+        // const const1 = "const 변수";
+        // console.log('const1=>', const1);
+
+        // const1 = "const 변수 덮어쓰기"; //여기서 에러남
+        // console.log('const1=>', const1);
+
+        // const const1 = "const 변수 재정의";//에러
+        // console.log('const1=>', const1);
+    </script>
+
+    <script>
+        // //4.const의 특징2
+        // const obj1 = {name:'홍길동',age:24}
+        // console.log(obj1);
+        // obj1.age = 22;
+        // console.log(obj1);
+
+        // // obj1 = {name:'강감찬',age:33}
+        // // console.log(obj1);
+
+        // obj1.name = '강감찬'; 
+        // obj1.age = 33;
+        // console.log(obj1);
+    </script>
+    <script>
+        // 5.const의 특징3(배열)
+        // const arr1= ["강아지","토끼","거북이"];
+        // console.log(arr1);
+        // arr1.push("야옹이");
+        // console.log(arr1);
+        // arr1 = ["강아지","토끼","거북이","야옹이","어흥이"]
+        // console.log(arr1);
+    </script>
+
+    <script>
+        //템플릿 문자열(리터럴 표기법)
+        // const name = '홍길동';
+        // const age = 24;
+        // const message = '내 이름은 '+name+ ' 입니다. 나이는 '+age+' 살입니다.';
+        // console.log(message);
+        // const message2 = `내 이름은 ${name} 입니다. 나이는 ${age} 살입니다.`;
+        // console.log(message2);
+
+        // function sayHello(){
+
+        //     return "안녕하세요!";
+        // }
+        // const month = 7;
+        // const message3 = `여러분 ${sayHello()} 우리가 수업한지 ${month-6}개월 됬습니다.`;
+        // console.log(message3);
+
+        // const obj1 = {name:'홍길동',age:24};
+        // const message4 = `객체출력 => ${JSON.stringify(obj1)}`;
+        // console.log(message4);
+
+        // const arr1 = ["강아지","토끼","거북이"];
+        // const message5 = `배열출력 => ${arr1}`;
+        // console.log(message5);
+    </script>
+
+    <script>
+        //7.화살표함수(람다식) ()=>{}
+        // //기명함수방식(일반)
+        // function func1(a,b){
+        //     return a+b;
+        // }
+        // let a = 3; let b = 4;
+        // console.log(`${a}+ ${b} = ${func1(a,b)}`);
+
+        // //무명함수를 변수로 받아서 사용
+        // let plus = function(a,b){return a+b};
+        // console.log(`${a} + ${b} = ${plus(a,b)}`);
+
+        // // 람다식1
+        // let add = (a,b) =>{return a+b};
+        // console.log(`${a} + ${b} = ${add(a,b)}`);
+
+        // // 람다식2
+        // let add2 = (a,b) =>a+b;
+        // console.log(`${a} + ${b} = ${add2(a,b)}`);
+
+        // //람다식3
+        // let name = '홍길동';
+        // let age = 24;
+        // const add3 = (_name,_age)=>(
+        //     {
+        //         name:_name,
+        //         age:_age
+        //     }
+        // );
+        // console.log(`람다식(객체) ${ JSON.stringify(add3(name,age))}`);
+
+        // //람다식4
+        // const add4 = (name, age) =>({
+        //     name,
+        //     age,
+        // });
+        // console.log(`람다식(객체) ${ JSON.stringify(add3(name,age))}`);
+    </script>
+
+    <script>
+        //8.분할대입
+        //일반적인 방법
+        //     const myProfile = {
+        //         name : "홍길동", age : 24,
+        //     };
+
+        //     const message = `나의 이름은 ${myProfile.name}입니다. 나이는 ${myProfile.age} 살입니다`;
+        //     console.log(message)
+
+        //     // const {name, age}= myProfile;
+        //     // // name = '강감찬';
+        //     // // const{age} = myProfile;
+        //     // const message2 = `나의 이름은 ${name}입니다.나이는 ${age} 살입니다.`;
+        //     // console.log(message2);
+
+        //     const {name:_name, age:_age}= myProfile;
+        //     // name = '강감찬';
+        //     // const{age} = myProfile;
+        //     const message3 = `나의 이름은 ${_name}입니다.나이는 ${_age} 살입니다.`;
+        //     console.log(message3);
+        // 
+    </script>
+
+    <script>
+        //9.분할대입( 배열)
+        //일반적인 방법
+        // const myProfile = ["홍길동", 24];
+        //     const message = `나의 이름은 ${myProfile[0]}입니다. 나이는 ${myProfile[1]} 살입니다`;
+        //     console.log(message)
+
+        // const [name,age]= myProfile
+        //     const message3 = `나의 이름은 ${name}입니다. 나이는 ${age} 살입니다`;
+        //     console.log(message3)
+    </script>
+
+    <script>
+        // //10.디폴트 파라미터 (=)
+        // const sayHello = (name = '손') => console.log(`${name}님 안녕하세요`);
+
+        // sayHello('홍길동');
+        // sayHello();
+        // const sayHello2 = (name = '손',age=100) => console.log(`당신 ${name}입니다. 나이는 ${age}살입니다.`);
+
+        // sayHello2('홍길동',24);
+        // sayHello2();
+        // sayHello2('광개토');
+        // sayHello2(name,23);
+
+        // const myProfile ={age:24, name: '홍길동'}
+        // const {name = "을지문덕"} = myProfile;
+        // const message3 = `나의 이름은 ${name}입니다. 나이는 ${myProfile.age} 살입니다`;
+        // console.log(message3);
+    </script>
+
+    <script>
+        // 11.스프레드 구문(...)
+        // const arr1 = [1,2];
+        // console.log(arr1);
+        // console.log(...arr1);
+
+        // const printSum = (num1,num2)=>console.log(num1+num2);
+        // printSum(arr1[0],arr1[1]);
+        // printSum(...arr1);
+
+        // const arr2 =  [1,2,3,4,5];
+        // const [num1, num2,...arr3] = arr2
+        // console.log('num1=>',num1);
+        // console.log('num2=>',num2);
+        // console.log('arr3=>',...arr3);
+        
+        // const arr4 = [10,20];
+        // const arr5 = [30,40];
+        // const arr6 = [...arr4,...arr5]
+        // console.log(arr6);//[10,20,30,40]
+
+        // //얕은복사 깊은목사
+        // const arr7 = arr4;
+        // console.log('arr4=>',arr4);
+        // console.log('arr7=>', arr7);
+
+        // arr7[0]= 99;
+        // console.log('arr4=>',arr4);
+        // console.log('arr7=>',arr7);
+
+        // arr8=[...arr4];
+        // arr8[0] = 999;
+        // console.log('arr4=>', arr4);
+        // console.log('arr8=>', arr8);
+    </script>
+
+<script>
+    // const name = '홍길동';
+    // const age = 24;
+
+    // const user={
+    //     name: name,
+    //     age: age
+    // };
+    // console.log(user);
+
+    // const user2 = {name, age}
+    // console.log(user2);
+</script>
+<script>
+    //13.삼항연산다
+    // (조건)? 참이면실행: 거짓이면 실행;
+    // const val = 1>0? "참입니다.": "거짓입니다.";
+    // console.log(val);
+    // 1>0 ? console.log("참입니다."): console.log("거짓입니다.");
+    
+    // const printNum = (num) =>{
+    //     const message = typeof num === 'number' ? num.toLocaleString(): "숫자가 아닙니다.";
+    //     console.log(message);
+    // }
+
+    // printNum(13000);
+    // printNum("13000");
+</script>
+
+<script>
+    //14.map함수
+    // //일반적인방법
+    // const aniArr = ['강아지', '망아지', '야옹이'];
+    // for ( let idx = 0; idx<aniArr.length; idx++){
+    //     console.log(aniArr[idx]);
+    // }
+
+    // map함수 구조
+    // 배열.map ( 요소를 순회해서 실행할 함수);
+    // 배열.map( (name,index) => {실행문});
+    // aniArr.map((name,index)=>{ console.log(name);})
+    // function isHangul(text) {
+    //     const hangulPattern = /^[ㄱ-ㅎ가-힣]+$/;
+    //     return hangulPattern.test(text);
+    // }
+
+    // function isAlphabet(text){
+    //     const alphabetPattern = /^[a-zA-Z]+$/;
+    //     return alphabetPattern.test(text);
+    // }
+    
+
+    // const nameArr= ['이순신','Nelson','강감찬']
+    // const nameArr2 = nameArr.map((name)=>{
+    //     if(isHangul(name)){
+    //         return name +'장군';
+    //     } else{
+    //         return 'Admiral'+name;
+    //     }
+    // })
+    // console.log(nameArr);
+    // console.log(nameArr2);
+
+    //////////////////////////////////
+
+
+    //요금: 1000원 미성년 10%할인 60세이상 50% 할인
+    //홍길동: 1000원, 강감찬: 500원, 을지문덕: 1000원, 최홍만: 900원, 세종대왕: 500원
+    //map 함수 이용
+    // const manArr = [
+    //     {name:'홍길동', age: 24},
+    //     {name:'강감찬', age: 74},
+    //     {name:'을지문덕', age: 44},
+    //     {name:'최홍만', age: 14},
+    //     {name:'세종대왕', age: 66},
+    // ];
+
+
+    // const manArr1 = manArr.map(({name,age})=>{
+    //     if(age < 20){
+    //         return name +':'+'900원';
+    //     } else if(age > 60){
+    //         return name+':'+'500원';
+    //     } else{
+    //         return name+ ':'+ '1000원';
+    //     }
+    // });
+    
+    // console.log(manArr);
+    // console.log(manArr1);
+
+    const aniArr = ['강아지','망아지','야옹이','어흥이','거북이'];
+    
+    const aniArr1= aniArr.map((animal,index)=>(index% 2 === 0 ? animal : delete aniArr[index]));
+
+    console.log(aniArr1);
+</script>
+
+</body>
+
+</html>

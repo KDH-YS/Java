@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+    <link rel="stylesheet" href="./ex5/css/style.css">
+    <link rel="stylesheet" href="./ex5/css/reset.css">
+</head>
+<body>
+    <div>
+        <ul>
+            <li id="flower"><img src="./ex5/img/flower.jpg" alt="flower"></li>
+            <li id="building"><img src="./ex5/img/building.jpg" alt="building"></li>
+            <button id="down">down</button>
+        </ul>
+    </div>
+    <script>
+        $(function(){
+            $('#building').click(function(){
+                let imgWidth = $(this).width();
+                $('div>ul').animate({marginLeft:'+='+ imgWidth},300,'swing');
+            });
+            $('#flower').click(function(){
+                let imgWidth = $(this).width();
+                $('div>ul').animate({marginLeft:'-='+ imgWidth},1000,'swing');
+            });
+            $('#down').click(function(){
+                let imgWidth = $(this).height();
+                $('div>ul').animate({marginTop:'+='+ imgWidth*10},300,'swing');
+            });
+        });
+    </script>
+</body>
+</html>

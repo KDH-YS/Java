@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><script src="../jquery.js"></script>
+<style>
+    ul,li{list-style: none;}
+    a{cursor: pointer;}
+    a:hover{background-color: aqua;}
+</style>
+</head>
+<body>
+    <ul id="btn">
+        <li><a data="./images/house_01.jpg">주택1</a></li>
+        <li><a data="./images/house_02.jpg">주택2</a></li>
+        <li><a data="./images/house_03.jpg">주택3</a></li>
+        <li><a data="./images/house_04.jpg">주택4</a></li>
+    </ul>
+    <p><img src="./images/house_05.jpg" alt="" id="back_img"></p>
+
+    <script>
+        $(function(){
+            $('li>a').click(function(){
+                $(this).text('강아지');
+                console.log($(this));
+                let img = $(this).attr('data');
+                $('p>img').attr('src',img);
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding: 0;   margin: 0;}
+        nav{width: 100%; overflow: hidden; height: 50px; background-color: #1b2035; margin: 0px auto;}
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+        }
+        .header{
+            color: black;
+        }
+        .header-1{
+            position: relative;
+            grid-column: 1 / 2;
+            width: 300px;
+            margin-left: 50px;
+            margin-top: 50px;
+            white-space: nowrap;    
+            overflow: hidden;       
+            text-overflow: ellipsis;    
+
+        }
+        .header-1>p.right{
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+        .header-1>H3{
+            color: rgb(6, 56, 8);
+            text-decoration: underline;
+            border-bottom: 1px solid rgb(189, 170, 170);
+        }
+
+        .header-2{
+            grid-column: 2 / 3;
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+        .header-3{
+            position: relative;
+            grid-column: 3 / 4;
+            margin-top: 50px;
+            width: 300px;
+            margin-left: 30px;
+        }
+        .header-3>H3{
+            color: rgb(6, 56, 8);
+            text-decoration: underline;
+            border-bottom: 1px solid rgb(189, 170, 170);
+        }
+        .header-3>p.right{
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+
+        .aside{
+            margin-top: 30px;
+            width: 280px;
+            height: 260px;
+            margin-bottom: 10px;
+            margin-left: 50px;
+            text-align: center;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>.</nav>
+    <div class="container">
+        <div class="header header-1">
+            <h3>공지사항</h3>
+            <p class="right"><a href="#">더보기+</a></p>
+            <p class="content"><a href="#">웹표준으로 제작되어 스마트폰에서도 이상없이 작동합니다.</a></p>
+            <p class="content"><a href="#">타업종에서도 이용이 가능하며, 그 경우 사전에 문의주시면 감사하겠습니다.</a></p>
+            <p class="content"><a href="#">펜션, 게스트하우스, 민박등의 업종에 적합한 디자인입니다.</a></p>
+            
+        </div>
+        <div class="header header-2">
+            <h2>고객센터</h2>
+            <p id="time">전화상담 가능시간:오전 09시 ~ 오후 06시</p>
+            <h2 class="phone">070-000-0000</h2>
+            <p id="NH"><b>농협 000-0000-00000-00 000</b></p>
+        </div>
+        <div class="header header-3">
+            <h3>고객문의</h3>
+            <p class="right"><a href="#">더보기+</a></p>
+            <p id="conten"><a href="#">겨울에도 바베큐시설이 이용..</a></p>
+            <p id="conten"><a href="#">픽업서비스 가능하나요?</a></p>
+            <p id="conten"><a href="#">펜션 근처에 먹을거리를 살..</a></p>
+            
+        </div>
+        
+        <div class="aside" id="1"><img src="http://placehold.it/300x200" alt="">샘플사진</div>
+        <div class="aside" id="2"><img src="http://placehold.it/300x200" alt="">샘플사진</div>
+        <div class="aside" id="3"><img src="http://placehold.it/300x200" alt="">샘플사진</div>
+        <div class="aside" id="4"><img src="http://placehold.it/300x200" alt="">샘플사진</div>
+        <div class="aside" id="5"><img src="http://placehold.it/300x200" alt="">샘플사진</div>
+        <div class="aside" id="6"><img src="http://placehold.it/300x200" alt="">샘플사진</div>
+        
+
+    </div>
+    z
+    
+</body>
+</html>
